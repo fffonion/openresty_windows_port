@@ -3,13 +3,10 @@ OpenResty_windows
 The following readme is based on [moonbingbing/openresty_windows](https://github.com/moonbingbing/openresty_windows)
 
 
-Download OpenResty_windows binary package
+Prebuilt binaries
 =========
 You can go to release, direct download the compiled package.  
-Unzip and run :
-
-    nginx.exe -c your_nginx.conf
-Done!
+These files are built using VS2013 and VS2008.
 
 Build prerequisites
 =========
