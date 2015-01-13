@@ -22,9 +22,9 @@ Build OpenResty
 You can check the directory structure with this project.
 
 ### prepare
-*    Copy all files in `nginx-*` into `src`
+*    Copy all files in `nginx-x.x.x*` into `src`
 *    Start Your_Visual_Studio_Path\VC\vcvarsall.bat   
-*    cd into `LuaJIT-2.1-20140805\src` (or other version) and run *msvcbuild.bat*
+*    cd into `LuaJIT-2.1-20140805\src` (or other version) and run *msvcbuild.bat*    Copy PostgreSQL client binary to objs/ (libpq.dll), you may also need dependencies if error occured later(libintl.dll, usually shipped with name libintl-8.dll); copy `LuaJIT-2.1-20140805\src\lua51.dll`, openssl libs to objs/
 *    Run  C:\mingw\msys\1.0\msys.bat in the above command window
 *    cd to the project dir in the above command window
 
@@ -72,11 +72,11 @@ Note that version number may change.
 ```
     
 *  Add `#include <stdint.h>` to `ngx_postgres-*/src/ngx_postgres_output.c`
+*  find `#if (NGX_THREADS)` in ngx_http_lua_socket_udp.c, comment out all inside the macro(for 0.9.13, it's on line 1403)
 *  If you want to manully edit config files of `ngx_lua` and `ngx_postgres`, add lines between **#################################Add** in sample file `ngx_lua-0.9.12/config` and `ngx_postgres-1.0rc4/config`
 
 ### make
   nmake
-
 
 License
 =========
