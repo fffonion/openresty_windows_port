@@ -15,14 +15,14 @@ if [ -n "$LIBPQ_INC" -o -n "$LIBPQ_LIB" ]; then
     fi
     . auto/feature
 	
-	#################################Add
+	###Add###
 	if [ $ngx_found = no ]; then
         echo "msvc1"
         # msvc
         ngx_feature_libs="$LIBPQ_LIB/libpq.lib"
         . auto/feature
     fi
-	#################################Add
+	###Add###
 else
     if [ -z "$PG_CONFIG" ]; then
         PG_CONFIG=pg_config
@@ -103,14 +103,14 @@ else
         fi
         . auto/feature
     fi
-	#################################Add
+	###Add###
     if [ $ngx_found = no ]; then
         $0: msvc2
         # msvc
         ngx_feature_libs="$LIBPQ_LIB/libpq.lib"
         . auto/feature
     fi
-	#################################Add
+	###Add###
 fi
 
 if [ $ngx_found = no ]; then

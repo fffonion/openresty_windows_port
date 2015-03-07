@@ -21,13 +21,13 @@ if [ -n "$LUAJIT_INC" -o -n "$LUAJIT_LIB" ]; then
 
     . auto/feature
 	
-	#################################Add
+	###Add###
     if [ $ngx_found = no ]; then
         # msvc
         ngx_feature_libs="$LUAJIT_LIB/lua51.lib"
         . auto/feature
     fi
-    #################################Add
+    ###Add###
 	
     if [ $ngx_found = no ]; then
         cat << END
